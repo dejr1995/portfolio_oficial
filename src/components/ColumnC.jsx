@@ -7,11 +7,24 @@ const ColumnC = () => {
 
   const [urls, setUrls] = useState([]);
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    fetch(`${API_BASE_URL}/api/col_center`)
+    const delay = 1600;
+
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+      fetch(`${API_BASE_URL}/api/col_center`)
       .then((response) => response.json())
       .then((data) => setUrls(data))
       .catch((error) => console.error("Error fetching data:", error));
+    }, delay);
+    
+    return () => {
+      setIsVisible(false);
+      clearTimeout(timer);
+      
+    }
   }, []);
   
   function getRandomHeight() {
@@ -23,8 +36,8 @@ const ColumnC = () => {
 
   return (
     <div className="w-full lg:mb-24">
-      {urls.map((item, index) => (
-      <div className="border border-gray-300 rounded-lg ml-1 mt-2 mr-1">
+      {isVisible && urls.map((item, index) => (
+      <div className="border border-gray-300 rounded-lg ml-1 mt-2 mr-1 animated-slide-in-top-window">
         <div className="flex flex-col m-1 " key={index} style={{ height: getRandomHeight() }}>
         <ProjectVideo
             videoSrc={item.urlvideo}

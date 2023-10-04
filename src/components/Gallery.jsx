@@ -15,7 +15,7 @@ const Gallery = () => {
   return (
     <section id="gallery" className="grid lg:grid-cols-2 lg:mt-0 mt-10">
       <div>
-        <GalleryItem myImg="https://i.imgur.com/MQMNHCD.jpg" />
+        <GalleryItem myImg="https://images.pexels.com/photos/3574590/pexels-photo-3574590.jpeg" />
       </div>
       {galleryItems.map((item) => (
         <GalleryItem key={item.id} myImg={item.urlimage} />

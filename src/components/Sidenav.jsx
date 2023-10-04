@@ -54,28 +54,32 @@ const Sidenav = () => {
       {nav ? (
         <div className="fixed w-full h-screen top-0 bg-white/90 flex flex-col justify-center items-center z-20">
           <a
-            href="/home"
+            href="/#/home"
+            onClick={() => setNav(!nav)}
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineHome size={20} />
             <span className="pl-4">Home</span>
           </a>
           <a
-            href="/projects"
+            href="/#/projects"
+            onClick={() => setNav(!nav)}
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <AiOutlineProject size={20} />
             <span className="pl-4">Projects</span>
           </a>
           <a
-            href="/gallery"
+            href="/#/gallery"
+            onClick={() => setNav(!nav)}
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <GiPhotoCamera size={20} />
             <span className="pl-4">Gallery</span>
           </a>
           <a
-            href="/person"
+            href="/#/person"
+            onClick={() => setNav(!nav)}
             className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200"
           >
             <BsPerson size={20} />
@@ -90,7 +94,7 @@ const Sidenav = () => {
         <footer className="footer-content border bg-neutral-800/90 scale-75 rounded-full transform transition-transform duration-300 ease-in">
           <div className="flex flex-row">
             <a
-              href="/home"
+              href="/#/home"
               onClick={() => handleLinkClick("home")}
               className={`${
                 activeLink === "home"
@@ -102,7 +106,7 @@ const Sidenav = () => {
               <AiOutlineHome size={25}/>
             </a>
             <a
-              href="/projects"
+              href="/#/projects"
               onClick={() => handleLinkClick("projects")}
               className={`${
                 activeLink === "projects"
@@ -114,7 +118,7 @@ const Sidenav = () => {
               <AiOutlineProject size={25}/>
             </a>
             <a
-              href="/gallery"
+              href="/#/gallery"
               onClick={() => handleLinkClick("gallery")}
               className={`${
                 activeLink === "gallery"
@@ -126,7 +130,7 @@ const Sidenav = () => {
               <GiPhotoCamera size={25}/>
             </a>
             <a
-              href="/person"
+              href="/#/person"
               onClick={() => handleLinkClick("person")}
               className={`${
                 activeLink === "person"
@@ -138,7 +142,7 @@ const Sidenav = () => {
               <BsPerson size={25}/>
             </a>
             <a
-              href="#contact"
+              href="/#/contact"
               onClick={() => handleLinkClick("contact")}
               className={`${
                 activeLink === "contact"
