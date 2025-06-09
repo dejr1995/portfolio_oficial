@@ -42,10 +42,10 @@ const Iam = () => {
           </a> 
           </div>*/}
           <p className="dev-gray my-8 block md:hidden tracking-wide text-md">
-          {t("mytext1")} 
+            {t("mytext1")}
           </p>
           <p className="dev-gray my-8 block md:hidden tracking-wide text-md">
-          {t("mytext2")}
+            {t("mytext2")}
           </p>
           <div className="mx-auto lg:ml-14 rounded-2xl relative overflow-hidden -z-20 w-fit mt-8">
             <img
@@ -62,13 +62,12 @@ const Iam = () => {
         </div>
         <div className="lg:w-[44%] flex-col justify-center gap-6 lg:mr-10">
           <p className="dev-gray hidden lg:block tracking-wide text-md">
-          {t("mytext1")}
-            
+            {t("mytext1")}
           </p>
           <p className="dev-gray hidden lg:block tracking-wide text-md mt-2">
-          {t("mytext2")}
+            {t("mytext2")}
           </p>
-          <h3 className="text-2xl lg:text-lg text-center lg:text-left text-yellow-600 font-semibold mt-4">
+          <h3 className="text-2xl lg:text-xl text-center lg:text-left text-yellow-600 font-semibold mt-4">
             {t("subtitle1")}
           </h3>
           <div className="div-skills w-full h-full mt-4">

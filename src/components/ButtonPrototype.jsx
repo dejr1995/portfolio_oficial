@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ButtonPrototype = ({href, type}) => {
+const ButtonPrototype = ({ href, type }) => {
   const [isEmpty, setIsEmpty] = useState(false);
 
   useEffect(() => {
@@ -12,7 +12,10 @@ const ButtonPrototype = ({href, type}) => {
   }, [href]);
 
   return (
-    <a href={isEmpty ? "#" : href} onClick={isEmpty ? (e) => e.preventDefault() : undefined}>
+    <a
+      href={isEmpty ? "#" : href}
+      onClick={isEmpty ? (e) => e.preventDefault() : undefined}
+    >
       <div className="border bg-gray-100 h-[40px] rounded-lg flex justify-center items-center text-gray-500">
         {type}
         <div

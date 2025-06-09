@@ -54,7 +54,7 @@ const ProjectVideo = ({
         muted
         loop
       />
-
+      <div className="absolute group-hover:bg-black/40 transition duration-300 w-full h-full"></div>
       <div className="absolute rounded-lg inset-0 flex translate-y-[62%] flex-col justify-end items-start transition-all duration-500 group-hover:translate-y-0">
         <div className="flex flex-col items-center justify-start w-[345px]">
           <h3 className="self-start text-xl font-bold text-white p-2">
